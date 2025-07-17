@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectFlow - Streamline Your Project Management</title>
+    <meta name="description" content="Transform your team's productivity with ProjectFlow - the all-in-one project management platform trusted by 10,000+ teams worldwide.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #ffffff;">
+
+    <!-- Navigation -->
+    <nav style="position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); z-index: 1000; padding: 1rem 0; border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                <div style="width: 32px; height: 32px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem;">P</div>
+                <span style="font-size: 1.5rem; font-weight: 700; color: #1a1a1a;">ProjectFlow</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 2rem;">
+                <a href="#features" style="text-decoration: none; color: #666; font-weight: 500; transition: color 0.3s;">Features</a>
+                <a href="#pricing" style="text-decoration: none; color: #666; font-weight: 500; transition: color 0.3s;">Pricing</a>
+                <a href="#testimonials" style="text-decoration: none; color: #666; font-weight: 500; transition: color 0.3s;">Reviews</a>
+                <button onclick="openTrialModal()" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(102, 126, 234, 0.3)'">Start Free Trial</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section style="padding: 8rem 2rem 4rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; position: relative; overflow: hidden;">;
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 1000\"><defs><radialGradient id=\"a\" cx=\"50%\" cy=\"50%\" r=\"50%\"><stop offset=\"0%\" stop-color=\"%23ffffff\" stop-opacity=\"0.1\"/><stop offset=\"100%\" stop-color=\"%23ffffff\" stop-opacity=\"0\"/></radialGradient></defs><circle cx=\"200\" cy=\"200\" r=\"100\" fill=\"url(%23a)\"/><circle cx=\"800\" cy=\"300\" r=\"150\" fill=\"url(%23a)\"/><circle cx=\"400\" cy=\"700\" r=\"80\" fill=\"url(%23a)\"/></svg>') no-repeat center center; background-size: cover; opacity: 0.3;"></div>;
+        <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;">;
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Transform Your Team's Productivity</h1>
+                <p style="font-size: 1.3rem; margin-bottom: 3rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto;">ProjectFlow streamlines project management with intuitive workflows, real-time collaboration, and powerful analytics. Join 10,000+ teams who've boosted their productivity by 40%.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap;">
+                    <button onclick="openTrialModal()" style="background: white; color: #667eea; border: none; padding: 1rem 2rem; border-radius: 12px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); min-width: 200px;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 12px 35px rgba(0, 0, 0, 0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 0, 0, 0.1)'">Start Free Trial</button>
+                    <button onclick="document.getElementById('demo').scrollIntoView({behavior: 'smooth'})" style="background: rgba(255, 255, 255, 0.1); color: white; border: 2px solid rgba(255, 255, 255, 0.3); padding: 1rem 2rem; border-radius: 12px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: all 0.3s; backdrop-filter: blur(10px); min-width: 200px;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.borderColor='rgba(255, 255, 255, 0.5)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.borderColor='rgba(255, 255, 255, 0.3)'">Watch Demo</button>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">10,000+</div>
+                        <div style="opacity: 0.8;">Active Teams</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">40%</div>
+                        <div style="opacity: 0.8;">Productivity Boost</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">99.9%</div>
+                        <div style="opacity: 0.8;">Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Video Section -->
+    <section id="demo" style="padding: 4rem 2rem; background: #f8fafc;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 3rem; color: #1a1a1a;">See ProjectFlow in Action</h2>
+            <div style="position: relative; max-width: 800px; margin: 0 auto; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); background: #fff;">
+                <div style="aspect-ratio: 16/9; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+                    <div style="position: absolute; top: 20px; left: 20px; display: flex; gap: 8px;">
+                        <div style="width: 12px; height: 12px; background: #ff5f57; border-radius: 50%;"></div>
+                        <div style="width: 12px; height: 12px; background: #ffbd2e; border-radius: 50%;"></div>
+                        <div style="width: 12px; height: 12px; background: #28ca42; border-radius: 50%;"></div>
+                    </div>
+                    <button onclick="playDemo()" style="width: 80px; height: 80px; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);" onmouseover="this.style.transform='scale(1.1)'; this.style.background='rgba(255, 255, 255, 1)'" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(255, 255, 255, 0.9)'">
+                        <div style="width: 0; height: 0; border-left: 25px solid #667eea; border-top: 15px solid transparent; border-bottom: 15px solid transparent; margin-left: 5px;"></div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" style="padding: 6rem 2rem; background: white;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a1a;">Everything You Need to Succeed</h2>
+                <p style="font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto;">Powerful features designed to streamline your workflow and boost team productivity from day one.</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; margin-bottom: 4rem;">
+                <div style="background: #f8fafc; padding: 2.5rem; border-radius: 16px; transition: all 0.3s; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.1)'; this.style.background='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.background='#f8fafc'">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <div style="color: white; font-size: 1.5rem; font-weight: 700;">📋</div>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a1a;">Smart Task Management</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">Organize tasks with drag-and-drop boards, custom workflows, and automated assignments. Never miss a deadline again.</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #555;">
+                            <span style="color: #10b981; font-weight: 600;">✓</span> Kanban & Gantt views
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #555;">
+                            <span style="color: #10b981; font-weight: 600;">✓</span> Custom workflows
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; color: #555;">
+                            <span style="color: #10b981; font-weight: 600;">✓</span> Deadline tracking
+                        </li>
+                    </ul>
+                </div>
+                <div style="background: #f8fafc; padding: 2.5rem; border-radius: 16px; transition: all 0.3s; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.1)'; this.style.background='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.background='#f8fafc'">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <div style="color: white; font-size: 1.5rem; font-weight: 700;">👥</div>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a1a;">Real-time Collaboration</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">Work together seamlessly with live updates, comments, and file sharing. Keep everyone in sync effortlessly.</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #555;">
+                            <span style="color: #10b981; font-weight: 600;">✓</span> Live updates
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #555;">
+                            <span style="color: #10b981; font-weight: 600;">✓</span> Team chat
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; color: #555;">
+                            <span style="color: #10b981; font-weight: 600;">✓</span> File sharing
+                        </li>
+                    </ul>
+                </div>
+                <div style="background: #f8fafc; padding: 2.5rem; border-radius: 16px; transition: all 0.3s; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.1)'; this.style.background='#ffffff'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.background='#f8fafc'">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <div style="color: white; font-size: 1.5rem; font-weight: 700;">📊</div>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a1a;">Advanced Analytics</h3>
+                    <p style="color: #666; margin-bottom: 1.5rem;">Get insights into team performance, project progress, and resource allocation with comprehensive reports.</p>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #555;">
+                            <span style="color: #10b981; font-weight: 600;">✓</span> Performance dashboards
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #555;">
+                            <span style="color: #10b981; font-weight: 600;">✓</span> Custom reports
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; color: #555;">
+                            <span style="color: #10b981; font-weight: 600;">✓</span> Time tracking
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" style="padding: 6rem 2rem; background: #f8fafc;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a1a;">Loved by Teams Worldwide</h2>
+                <p style="font-size: 1.2rem; color: #666;">See what our customers are saying about ProjectFlow</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.08)'">
+                    <div style="display: flex; margin-bottom: 1rem;">
+                        <span style="color: #fbbf24; font-size: 1.2rem;">★★★★★</span>
+                    </div>
+                    <p style="color: #666; margin-bottom: 1.5rem; font-style: italic;">"ProjectFlow transformed how our team collaborates. We've reduced project delivery time by 30% and everyone stays aligned on priorities."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">SJ</div>
+                        <div>
+                            <div style="font-weight: 600; color: #1a1a1a;">Sarah Johnson</div>
+                            <div style="color: #666; font-size: 0.9rem;">Product Manager, TechCorp</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.08)'">
+                    <div style="display: flex; margin-bottom: 1rem;">
+                        <span style="color: #fbbf24; font-size: 1.2rem;">★★★★★</span>
+                    </div>
+                    <p style="color: #666; margin-bottom: 1.5rem; font-style: italic;">"The analytics dashboard gives us incredible insights into team performance. It's like having a crystal ball for project management."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">MC</div>
+                        <div>
+                            <div style="font-weight: 600; color: #1a1a1a;">Michael Chen</div>
+                            <div style="color: #666; font-size: 0.9rem;">CTO, StartupXYZ</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.08)'">
+                    <div style="display: flex; margin-bottom: 1rem;">
+                        <span style="color: #fbbf24; font-size: 1.2rem;">★★★★★</span>
+                    </div>
+                    <p style="color: #666; margin-bottom: 1.5rem; font-style: italic;">"Switching to ProjectFlow was the best decision we made. The interface is intuitive and the features are exactly what we needed."</p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">ED</div>
+                        <div>
+                            <div style="font-weight: 600; color: #1a1a1a;">Emily Davis</div>
+                            <div style="color: #666; font-size: 0.9rem;">Operations Director, GlobalTech</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" style="padding: 6rem 2rem; background: white;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.8rem; font-weight: 700; margin-bottom: 1rem; color: #1a1a1a;">Simple, Transparent Pricing</h2>
+                <p style="font-size: 1.2rem; color: #666; margin-bottom: 2rem;">Choose the perfect plan for your team. No hidden fees, cancel anytime.</p>
+                <div style="display: inline-flex; background: #f1f5f9; padding: 4px; border-radius: 12px; margin-bottom: 2rem;">
+                    <button id="monthlyBtn" onclick="togglePricing('monthly')" style="padding: 0.5rem 1.5rem; border: none; background: white; color: #1a1a1a; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">Monthly</button>
+                    <button id="annualBtn" onclick="togglePricing('annual')" style="padding: 0.5rem 1.5rem; border: none; background: transparent; color: #666; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.3s;">Annual (Save 20%)</button>
+                </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <!-- Starter Plan -->
+                <div style="background: #f8fafc; padding: 2.5rem; border-radius: 20px; text-align: center; border: 2px solid #e2e8f0; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0, 0, 0, 0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                    <h3 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a1a;">Starter</h3>
+                    <div style="margin-bottom: 2rem;">
+                        <span style="font-size: 3rem; font-weight: 700; color: #1a1a1a;">$9</span>
+                        <span style="color: #666; font-size: 1rem;">/user/month</span>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <div style="color: #666; margin-bottom: 1rem;">Perfect for small teams</div>
+                        <ul style="list-style: none; padding: 0; margin: 0; text-align: left;">
+                            <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; color: #555;">
+                                <span style="color: #10b981; font-weight: 600;">✓</span> Up to 5 team members
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; color: #555;">
+                                <span style="color: #10b981; font-weight: 600;">✓</span> Basic task management
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; color: #555;">
+                                <span style="color: #10b981; font-weight: 600;">✓</span> File sharing (5GB)
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem; color: #555;">
+                                <span style="color: #10b981; font-weight: 600;">✓</span> Email support
+                            </li>
+                        </ul>
+                    </div>
+                    <button onclick="selectPlan('starter')" style="width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 1rem; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(102, 126, 234, 0.3)'">Get Started</button>
+                </div>
+                
+                <!-- Professional Plan -->
