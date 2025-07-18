@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDev Conference 2024 - Leading Web Development Event</title>
+    <meta name="description" content="Join the premier web development conference featuring industry leaders, cutting-edge technologies, and networking opportunities.">
+    <meta name="keywords" content="web development, conference, programming, JavaScript, React, Vue, Angular, developers">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "WebDev Conference 2024",
+        "description": "Premier web development conference featuring industry leaders and cutting-edge technologies",
+        "startDate": "2024-09-15T09:00:00",
+        "endDate": "2024-09-17T18:00:00",
+        "location": {
+            "@type": "Place",
+            "name": "San Francisco Convention Center",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "747 Howard St",
+                "addressLocality": "San Francisco",
+                "addressRegion": "CA",
+                "postalCode": "94103",
+                "addressCountry": "US"
+            }
+        },
+        "organizer": {
+            "@type": "Organization",
+            "name": "WebDev Events Inc"
+        }
+    }
+    </script>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" style="position: absolute; top: -40px; left: 6px; color: #fff; background: #000; padding: 8px 16px; text-decoration: none; border-radius: 4px; z-index: 1000;" 
+       onfocus="this.style.top='6px'" onblur="this.style.top='-40px'">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav style="background: rgba(0,0,0,0.9); backdrop-filter: blur(10px); padding: 1rem 0; position: fixed; width: 100%; top: 0; z-index: 999; transition: all 0.3s ease;" id="navbar">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem;">
+            <div style="color: #fff; font-size: 1.5rem; font-weight: 700;">
+                WebDev<span style="color: #ff6b6b;">2024</span>
+            </div>
+            <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 2rem;">
+                <li><a href="#home" style="color: #fff; text-decoration: none; padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s ease;" 
+                       onmouseover="this.style.background='rgba(255,107,107,0.2)'" onmouseout="this.style.background='transparent'">Home</a></li>
+                <li><a href="#speakers" style="color: #fff; text-decoration: none; padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s ease;" 
+                       onmouseover="this.style.background='rgba(255,107,107,0.2)'" onmouseout="this.style.background='transparent'">Speakers</a></li>
+                <li><a href="#schedule" style="color: #fff; text-decoration: none; padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s ease;" 
+                       onmouseover="this.style.background='rgba(255,107,107,0.2)'" onmouseout="this.style.background='transparent'">Schedule</a></li>
+                <li><a href="#venue" style="color: #fff; text-decoration: none; padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s ease;" 
+                       onmouseover="this.style.background='rgba(255,107,107,0.2)'" onmouseout="this.style.background='transparent'">Venue</a></li>
+                <li><a href="#sponsors" style="color: #fff; text-decoration: none; padding: 0.5rem 1rem; border-radius: 25px; transition: all 0.3s ease;" 
+                       onmouseover="this.style.background='rgba(255,107,107,0.2)'" onmouseout="this.style.background='transparent'">Sponsors</a></li>
+                <li><a href="#register" style="background: #ff6b6b; color: #fff; text-decoration: none; padding: 0.5rem 1.5rem; border-radius: 25px; transition: all 0.3s ease;" 
+                       onmouseover="this.style.background='#ff5252'" onmouseout="this.style.background='#ff6b6b'">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="home" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 2rem; position: relative; overflow: hidden;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 1000\"><defs><radialGradient id=\"g\"><stop offset=\"0%\" stop-color=\"%23ffffff\" stop-opacity=\"0.1\"/><stop offset=\"100%\" stop-color=\"%23ffffff\" stop-opacity=\"0\"/></radialGradient></defs><circle cx=\"200\" cy=\"200\" r=\"100\" fill=\"url(%23g)\"/><circle cx=\"800\" cy=\"300\" r=\"150\" fill=\"url(%23g)\"/><circle cx=\"500\" cy=\"700\" r=\"120\" fill=\"url(%23g)\"/></svg>') no-repeat center center/cover; animation: float 20s ease-in-out infinite;"></div>
+            
+            <div style="max-width: 800px; z-index: 1; position: relative;">
+                <h1 style="font-size: 4rem; margin: 0 0 1rem 0; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); animation: slideUp 1s ease-out;">
+                    WebDev Conference <span style="color: #ff6b6b;">2024</span>
+                </h1>
+                <p style="font-size: 1.5rem; color: rgba(255,255,255,0.9); margin-bottom: 2rem; animation: slideUp 1s ease-out 0.2s both;">
+                    The future of web development starts here
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem;">
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem 1.5rem; border-radius: 10px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                        <div style="font-size: 2rem; font-weight: 700; color: #ff6b6b;">Sep 15-17</div>
+                        <div style="color: rgba(255,255,255,0.8);">2024</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem 1.5rem; border-radius: 10px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                        <div style="font-size: 2rem; font-weight: 700; color: #ff6b6b;">San Francisco</div>
+                        <div style="color: rgba(255,255,255,0.8);">Convention Center</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.1); padding: 1rem 1.5rem; border-radius: 10px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+                        <div style="font-size: 2rem; font-weight: 700; color: #ff6b6b;">50+</div>
+                        <div style="color: rgba(255,255,255,0.8);">Expert Speakers</div>
+                    </div>
+                </div>
+                <a href="#register" style="display: inline-block; background: linear-gradient(45deg, #ff6b6b, #ff8e8e); color: #fff; text-decoration: none; padding: 1rem 2rem; border-radius: 50px; font-size: 1.2rem; font-weight: 600; box-shadow: 0 8px 25px rgba(255,107,107,0.3); transition: all 0.3s ease; animation: pulse 2s infinite;"
+                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 12px 35px rgba(255,107,107,0.4)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(255,107,107,0.3)'">
+                    Register Now - Early Bird 50% Off
+                </a>
+            </div>
+        </section>
+
+        <!-- Live Updates Section -->
+        <section style="background: #fff; padding: 4rem 0; text-align: center;" id="updates">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: #333;">Live Updates</h2>
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 15px; color: #fff; margin-bottom: 2rem;">
+                    <div style="font-size: 1.2rem; margin-bottom: 1rem;">🔴 LIVE: Registration is now open!</div>
+                    <div style="font-size: 1rem; opacity: 0.9;">Early bird pricing available until August 15th. Limited seats remaining!</div>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #ff6b6b;">
+                        <div style="font-weight: 600; color: #ff6b6b; margin-bottom: 0.5rem;">📅 Schedule Released</div>
+                        <div style="font-size: 0.9rem; color: #666;">Full 3-day agenda now available</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #4ecdc4;">
+                        <div style="font-weight: 600; color: #4ecdc4; margin-bottom: 0.5rem;">🎤 New Speaker Added</div>
+                        <div style="font-size: 0.9rem; color: #666;">Sarah Chen from Microsoft joins us!</div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #45b7d1;">
+                        <div style="font-weight: 600; color: #45b7d1; margin-bottom: 0.5rem;">🏨 Hotel Deals</div>
+                        <div style="font-size: 0.9rem; color: #666;">Special rates now available</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speakers Section -->
+        <section id="speakers" style="background: #f8f9fa; padding: 4rem 0;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: #333;">Featured Speakers</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Speaker Cards -->
+                    <div style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)'"
+                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'"
+                         onclick="toggleSpeakerDetails(this)">
+                        <div style="height: 200px; background: linear-gradient(45deg, #ff6b6b, #ff8e8e); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 4rem;">
+                            👨‍💻
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.3rem;">John Rodriguez</h3>
+                            <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.9rem;">Senior Principal Engineer @ Google</p>
+                            <div style="color: #ff6b6b; font-weight: 600; margin-bottom: 1rem;">🎯 "The Future of Web Performance"</div>
+                            <div style="display: none; color: #666; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 1rem;" class="speaker-details">
+                                <p>John leads Chrome's performance team and has been instrumental in developing Core Web Vitals. He'll share cutting-edge optimization techniques and what's coming next for web performance.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Web Performance</span>
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Core Web Vitals</span>
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">Chrome DevTools</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)'"
+                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'"
+                         onclick="toggleSpeakerDetails(this)">
+                        <div style="height: 200px; background: linear-gradient(45deg, #4ecdc4, #7bdcb5); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 4rem;">
+                            👩‍💻
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.3rem;">Sarah Chen</h3>
+                            <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.9rem;">Principal Program Manager @ Microsoft</p>
+                            <div style="color: #4ecdc4; font-weight: 600; margin-bottom: 1rem;">🚀 "Building Accessible Web Apps at Scale"</div>
+                            <div style="display: none; color: #666; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 1rem;" class="speaker-details">
+                                <p>Sarah leads accessibility initiatives for Microsoft's web properties. Learn how to build inclusive web experiences that work for everyone, with practical tools and techniques.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Accessibility</span>
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">WCAG</span>
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">Inclusive Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)'"
+                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'"
+                         onclick="toggleSpeakerDetails(this)">
+                        <div style="height: 200px; background: linear-gradient(45deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 4rem;">
+                            👨‍🔬
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.3rem;">Alex Thompson</h3>
+                            <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.9rem;">Lead Engineer @ Vercel</p>
+                            <div style="color: #667eea; font-weight: 600; margin-bottom: 1rem;">⚡ "Next.js 15: What's New and What's Next"</div>
+                            <div style="display: none; color: #666; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 1rem;" class="speaker-details">
+                                <p>Alex is a core contributor to Next.js and will unveil the latest features in Next.js 15, including new performance optimizations and developer experience improvements.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Next.js</span>
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">React</span>
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">SSR</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer;"
+                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)'"
+                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'"
+                         onclick="toggleSpeakerDetails(this)">
+                        <div style="height: 200px; background: linear-gradient(45deg, #f093fb, #f5576c); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 4rem;">
+                            👩‍🎨
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <h3 style="margin: 0 0 0.5rem 0; color: #333; font-size: 1.3rem;">Maria Santos</h3>
+                            <p style="color: #666; margin: 0 0 1rem 0; font-size: 0.9rem;">Design Systems Lead @ Figma</p>
+                            <div style="color: #f5576c; font-weight: 600; margin-bottom: 1rem;">🎨 "Design Systems That Scale"</div>
+                            <div style="display: none; color: #666; font-size: 0.9rem; border-top: 1px solid #eee; padding-top: 1rem;" class="speaker-details">
+                                <p>Maria has built design systems used by millions of developers. Discover how to create maintainable, scalable design systems that bridge the gap between design and development.</p>
+                                <div style="margin-top: 1rem;">
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Design Systems</span>
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem; margin-right: 0.5rem;">Component Libraries</span>
+                                    <span style="display: inline-block; background: #f0f0f0; padding: 0.3rem 0.8rem; border-radius: 15px; font-size: 0.8rem;">Figma</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" style="background: #fff; padding: 4rem 0;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+                <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 3rem; color: #333;">Conference Schedule</h2>
+                
+                <!-- Day Tabs -->
+                <div style="display: flex; justify-content: center; margin-bottom: 3rem; gap: 1rem;">
+                    <button style="background: #ff6b6b; color: #fff; border: none; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease;" 
+                            onclick="showDay('day1')" id="day1-btn">
+                        Day 1 - Sep 15
+                    </button>
+                    <button style="background: transparent; color: #666; border: 2px solid #ddd; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease;" 
+                            onclick="showDay('day2')" id="day2-btn">
+                        Day 2 - Sep 16
+                    </button>
+                    <button style="background: transparent; color: #666; border: 2px solid #ddd; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-size: 1rem; transition: all 0.3s ease;" 
+                            onclick="showDay('day3')" id="day3-btn">
+                        Day 3 - Sep 17
+                    </button>
+                </div>
+
+                <!-- Day 1 Schedule -->
+                <div id="day1" style="display: block;">
+                    <div style="background: #f8f9fa; border-radius: 15px; padding: 2rem;">
+                        <h3 style="text-align: center; color: #ff6b6b; margin-bottom: 2rem; font-size: 1.5rem;">Opening Day - Keynotes & Fundamentals</h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="display: flex; align-items: center; background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                                <div style="width: 100px; text-align: center; color: #ff6b6b; font-weight: 600; font-size: 1.1rem;">9:00 AM</div>
+                                <div style="flex: 1;">
+                                    <h4 style="margin: 0 0 0.5rem 0; color: #333;">Registration & Welcome Coffee</h4>
+                                    <p style="margin: 0; color: #666; font-size: 0.9rem;">Network with fellow developers and grab your conference swag</p>
+                                </div>
+                                <div style="background: #f0f0f0; padding: 0.5rem 1rem; border-radius: 15px; font-size: 0.8rem; color: #666;">Networking</div>
+                            </div>
+                            <div style="display: flex; align-items: center; background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                                <div style="width: 100px; text-align: center; color: #ff6b6b; font-weight: 600; font-size: 1.1rem;">10:00 AM</div>
+                                <div style="flex: 1;">
+                                    <h4 style="margin: 0 0 0.5rem 0; color: #333;">Opening Keynote: The Future of Web Development</h4>
+                                    <p style="margin: 0; color: #666; font-size: 0.9rem;">John Rodriguez - Senior Principal Engineer @ Google</p>
+                                </div>
+                                <div style="background: #ffe6e6; padding: 0.5rem 1rem; border-radius: 15px; font-size: 0.8rem; color: #ff6b6b;">Keynote</div>
+                            </div>
+                            <div style="display: flex; align-items: center; background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                                <div style="width: 100px; text-align: center; color: #ff6b6b; font-weight: 600; font-size: 1.1rem;">11:30 AM</div>
+                                <div style="flex: 1;">
+                                    <h4 style="margin: 0 0 0.5rem 0; color: #333;">Modern JavaScript: ES2024 and Beyond</h4>
+                                    <p style="margin: 0; color: #666; font-size: 0.9rem;">Deep dive into the latest JavaScript features and proposals</p>
+                                </div>
+                                <div style="background: #e6f3ff; padding: 0.5rem 1rem; border-radius: 15px; font-size: 0.8rem; color: #4a90e2;">Technical</div>
+                            </div>
+                            <div style="display: flex; align-items: center; background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                                <div style="width: 100px; text-align: center; color: #ff6b6b; font-weight: 600; font-size: 1.1rem;">12:30 PM</div>
+                                <div style="flex: 1;">
+                                    <h4 style="margin: 0 0 0.5rem 0; color: #333;">Lunch & Networking</h4>
+                                    <p style="margin: 0; color: #666; font-size: 0.9rem;">Enjoy
