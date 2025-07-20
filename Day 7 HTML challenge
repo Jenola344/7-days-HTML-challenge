@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SalesHub Dashboard - Complete business dashboard for sales teams with data visualization and management tools">
+    <meta name="keywords" content="sales dashboard, CRM, business intelligence, data visualization">
+    <meta name="author" content="SalesHub">
+    <title>SalesHub Dashboard - Sales Management Platform</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://api.saleshub.com">
+    <link rel="dns-prefetch" href="https://cdn.saleshub.com">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Progressive Web App manifest -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Security headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" hidden>Skip to main content</a>
+    
+    <!-- Application Container -->
+    <div id="app-container" data-app="saleshub-dashboard">
+        
+        <!-- Header Section -->
+        <header role="banner" id="main-header">
+            <div id="header-container">
+                <!-- Logo and Branding -->
+                <div id="brand-section">
+                    <h1 id="app-logo">
+                        <img src="/assets/logo.svg" alt="SalesHub" width="40" height="40">
+                        SalesHub Dashboard
+                    </h1>
+                </div>
+                
+                <!-- Global Search -->
+                <div id="global-search">
+                    <form role="search" method="GET" action="/search">
+                        <label for="global-search-input" hidden>Search SalesHub</label>
+                        <input 
+                            type="search" 
+                            id="global-search-input" 
+                            name="q" 
+                            placeholder="Search customers, deals, reports..." 
+                            autocomplete="off"
+                            data-search-suggestions="true">
+                        <button type="submit" aria-label="Search">
+                            <span aria-hidden="true">🔍</span>
+                        </button>
+                    </form>
+                    
+                    <!-- Search Suggestions Container -->
+                    <div id="search-suggestions" hidden>
+                        <ul role="listbox">
+                            <li role="option">Recent Searches</li>
+                            <li role="option">Customer: Acme Corp</li>
+                            <li role="option">Deal: Q4 Enterprise Contract</li>
+                            <li role="option">Report: Monthly Sales</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- User Profile and Notifications -->
+                <div id="header-actions">
+                    <!-- Notifications -->
+                    <div id="notifications-container">
+                        <button 
+                            type="button" 
+                            id="notifications-toggle" 
+                            aria-label="Notifications" 
+                            aria-expanded="false"
+                            data-badge-count="3">
+                            <span aria-hidden="true">🔔</span>
+                        </button>
+                        
+                        <div id="notifications-dropdown" hidden>
+                            <header>
+                                <h3>Notifications</h3>
+                                <button type="button">Mark all as read</button>
+                            </header>
+                            <ul>
+                                <li data-notification-id="1" data-read="false">
+                                    <time datetime="2025-07-20T10:30:00Z">10:30 AM</time>
+                                    <p>New lead assigned: TechStart Industries</p>
+                                </li>
+                                <li data-notification-id="2" data-read="false">
+                                    <time datetime="2025-07-20T09:15:00Z">9:15 AM</time>
+                                    <p>Deal milestone reached: $50K contract signed</p>
+                                </li>
+                                <li data-notification-id="3" data-read="false">
+                                    <time datetime="2025-07-20T08:45:00Z">8:45 AM</time>
+                                    <p>Weekly report ready for review</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- User Menu -->
+                    <div id="user-menu-container">
+                        <button 
+                            type="button" 
+                            id="user-menu-toggle" 
+                            aria-label="User menu" 
+                            aria-expanded="false">
+                            <img src="/assets/avatars/user-avatar.jpg" alt="John Doe" width="32" height="32">
+                            <span>John Doe</span>
+                            <span aria-hidden="true">▼</span>
+                        </button>
+                        
+                        <nav id="user-dropdown" hidden>
+                            <ul role="menu">
+                                <li role="menuitem"><a href="/profile">Profile Settings</a></li>
+                                <li role="menuitem"><a href="/preferences">Preferences</a></li>
+                                <li role="menuitem"><a href="/billing">Billing</a></li>
+                                <li role="separator"></li>
+                                <li role="menuitem"><a href="/help">Help Center</a></li>
+                                <li role="menuitem"><a href="/logout">Sign Out</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Application Layout -->
+        <div id="app-layout">
+            
+            <!-- Sidebar Navigation -->
+            <aside role="navigation" id="sidebar" aria-label="Main navigation">
+                <nav id="main-navigation">
+                    <ul role="menubar">
+                        <li role="menuitem">
+                            <a href="/dashboard" aria-current="page" data-nav="dashboard">
+                                <span aria-hidden="true">📊</span>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="/leads" data-nav="leads">
+                                <span aria-hidden="true">👥</span>
+                                Leads
+                                <span data-count="12">12</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="/deals" data-nav="deals">
+                                <span aria-hidden="true">💼</span>
+                                Deals
+                                <span data-count="8">8</span>
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="/customers" data-nav="customers">
+                                <span aria-hidden="true">🏢</span>
+                                Customers
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="/reports" data-nav="reports">
+                                <span aria-hidden="true">📈</span>
+                                Reports
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="/analytics" data-nav="analytics">
+                                <span aria-hidden="true">📊</span>
+                                Analytics
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="/team" data-nav="team">
+                                <span aria-hidden="true">👨‍💼</span>
+                                Team Management
+                            </a>
+                        </li>
+                        <li role="menuitem">
+                            <a href="/settings" data-nav="settings">
+                                <span aria-hidden="true">⚙️</span>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <!-- Sidebar Footer -->
+                <div id="sidebar-footer">
+                    <details>
+                        <summary>Quick Actions</summary>
+                        <ul>
+                            <li><button type="button">Add New Lead</button></li>
+                            <li><button type="button">Create Deal</button></li>
+                            <li><button type="button">Import Data</button></li>
+                            <li><button type="button">Export Report</button></li>
+                        </ul>
+                    </details>
+                </div>
+            </aside>
+            
+            <!-- Main Content Area -->
+            <main role="main" id="main-content" tabindex="-1">
+                
+                <!-- Breadcrumb Navigation -->
+                <nav aria-label="Breadcrumb" id="breadcrumb">
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li aria-current="page">Dashboard</li>
+                    </ol>
+                </nav>
+                
+                <!-- Page Header -->
+                <header id="page-header">
+                    <div id="page-title-section">
+                        <h1>Sales Dashboard</h1>
+                        <p>Welcome back, John! Here's your sales overview for today.</p>
+                    </div>
+                    
+                    <!-- Dashboard Controls -->
+                    <div id="dashboard-controls">
+                        <div id="date-range-selector">
+                            <label for="date-range">Date Range:</label>
+                            <select id="date-range" name="dateRange">
+                                <option value="today">Today</option>
+                                <option value="week" selected>This Week</option>
+                                <option value="month">This Month</option>
+                                <option value="quarter">This Quarter</option>
+                                <option value="year">This Year</option>
+                                <option value="custom">Custom Range</option>
+                            </select>
+                        </div>
+                        
+                        <div id="dashboard-actions">
+                            <button type="button" data-action="refresh">Refresh Data</button>
+                            <button type="button" data-action="export">Export Dashboard</button>
+                            <button type="button" data-action="customize">Customize View</button>
+                        </div>
+                    </div>
+                </header>
+                
+                <!-- Dashboard Content -->
+                <div id="dashboard-content">
+                    
+                    <!-- Key Performance Indicators -->
+                    <section id="kpi-section" aria-labelledby="kpi-heading">
+                        <h2 id="kpi-heading" hidden>Key Performance Indicators</h2>
+                        
+                        <div id="kpi-grid">
+                            <!-- Revenue Widget -->
+                            <article data-widget="revenue" data-priority="high">
+                                <header>
+                                    <h3>Total Revenue</h3>
+                                    <button type="button" aria-label="Widget options" data-widget-menu="revenue">⋮</button>
+                                </header>
+                                <div data-metric="primary">
+                                    <span data-value="$284,750">$284,750</span>
+                                    <span data-change="+12.5%" data-trend="positive">↗ +12.5%</span>
+                                </div>
+                                <div data-metric="secondary">
+                                    <span>vs last period: $253,200</span>
+                                </div>
+                                <footer>
+                                    <time datetime="2025-07-20">Updated: July 20, 2025</time>
+                                </footer>
+                            </article>
+                            
+                            <!-- Deals Widget -->
+                            <article data-widget="deals" data-priority="high">
+                                <header>
+                                    <h3>Active Deals</h3>
+                                    <button type="button" aria-label="Widget options" data-widget-menu="deals">⋮</button>
+                                </header>
+                                <div data-metric="primary">
+                                    <span data-value="47">47</span>
+                                    <span data-change="+8" data-trend="positive">↗ +8</span>
+                                </div>
+                                <div data-metric="breakdown">
+                                    <ul>
+                                        <li>Qualified: <strong>23</strong></li>
+                                        <li>Proposal: <strong>15</strong></li>
+                                        <li>Negotiation: <strong>9</strong></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            
+                            <!-- Conversion Rate Widget -->
+                            <article data-widget="conversion" data-priority="medium">
+                                <header>
+                                    <h3>Conversion Rate</h3>
+                                    <button type="button" aria-label="Widget options" data-widget-menu="conversion">⋮</button>
+                                </header>
+                                <div data-metric="primary">
+                                    <span data-value="24.8%">24.8%</span>
+                                    <span data-change="-2.1%" data-trend="negative">↘ -2.1%</span>
+                                </div>
+                                <div data-metric="target">
+                                    <progress value="24.8" max="30">24.8 of 30%</progress>
+                                    <span>Target: 30%</span>
+                                </div>
+                            </article>
+                            
+                            <!-- Team Performance Widget -->
+                            <article data-widget="team-performance" data-priority="medium">
+                                <header>
+                                    <h3>Team Performance</h3>
+                                    <button type="button" aria-label="Widget options" data-widget-menu="team">⋮</button>
+                                </header>
+                                <div data-metric="primary">
+                                    <span data-value="156">156 Points</span>
+                                    <span data-change="+23" data-trend="positive">↗ +23</span>
+                                </div>
+                                <div data-metric="leaderboard">
+                                    <ol>
+                                        <li>Sarah Chen - 89 pts</li>
+                                        <li>Mike Rodriguez - 67 pts</li>
+                                        <li>You - 45 pts</li>
+                                    </ol>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    
+                    <!-- Charts and Visualizations -->
+                    <section id="charts-section" aria-labelledby="charts-heading">
+                        <h2 id="charts-heading">Performance Analytics</h2>
+                        
+                        <div id="charts-grid">
+                            <!-- Sales Trend Chart -->
+                            <article data-chart="sales-trend" data-span="2">
+                                <header>
+                                    <h3>Sales Trend</h3>
+                                    <div data-chart-controls>
+                                        <button type="button" data-period="7d">7D</button>
+                                        <button type="button" data-period="30d" aria-pressed="true">30D</button>
+                                        <button type="button" data-period="90d">90D</button>
+                                        <button type="button" data-period="1y">1Y</button>
+                                    </div>
+                                </header>
+                                <div data-chart-container="line-chart" aria-label="Sales trend over time">
+                                    <!-- Chart placeholder with data points -->
+                                    <svg viewBox="0 0 800 300" role="img" aria-labelledby="sales-chart-title">
+                                        <title id="sales-chart-title">Sales performance over the last 30 days</title>
+                                        <desc>Line chart showing daily sales from $5,000 to $15,000 with an upward trend</desc>
+                                        
+                                        <!-- Grid lines -->
+                                        <defs>
+                                            <pattern id="grid" width="40" height="30" patternUnits="userSpaceOnUse">
+                                                <path d="M 40 0 L 0 0 0 30" fill="none" stroke="#e0e0e0" stroke-width="1"/>
+                                            </pattern>
+                                        </defs>
+                                        <rect width="100%" height="100%" fill="url(#grid)" />
+                                        
+                                        <!-- Data visualization placeholder -->
+                                        <polyline 
+                                            fill="none" 
+                                            stroke="#0066cc" 
+                                            stroke-width="3" 
+                                            points="50,250 100,220 150,200 200,180 250,160 300,140 350,120 400,100 450,90 500,80 550,75 600,70 650,65 700,60 750,55"
+                                        />
+                                        
+                                        <!-- Data points -->
+                                        <circle cx="750" cy="55" r="4" fill="#0066cc"/>
+                                    </svg>
+                                    
+                                    <!-- Chart legend -->
+                                    <div data-chart-legend>
+                                        <ul>
+                                            <li data-series="revenue">Revenue</li>
+                                            <li data-series="target">Target</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <!-- Pipeline Distribution -->
+                            <article data-chart="pipeline-distribution">
+                                <header>
+                                    <h3>Pipeline Distribution</h3>
+                                </header>
+                                <div data-chart-container="donut-chart" aria-label="Deal pipeline distribution">
+                                    <svg viewBox="0 0 200 200" role="img" aria-labelledby="pipeline-chart-title">
+                                        <title id="pipeline-chart-title">Distribution of deals across pipeline stages</title>
+                                        <desc>Donut chart showing 35% Prospecting, 25% Qualified, 20% Proposal, 15% Negotiation, 5% Closed Won</desc>
+                                        
+                                        <!-- Donut chart placeholder -->
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#ff6b35" stroke-width="20" stroke-dasharray="175 325" transform="rotate(-90 100 100)"/>
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#4ecdc4" stroke-width="20" stroke-dasharray="125 375" stroke-dashoffset="-175" transform="rotate(-90 100 100)"/>
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#45b7d1" stroke-width="20" stroke-dasharray="100 400" stroke-dashoffset="-300" transform="rotate(-90 100 100)"/>
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#f9ca24" stroke-width="20" stroke-dasharray="75 425" stroke-dashoffset="-400" transform="rotate(-90 100 100)"/>
+                                        <circle cx="100" cy="100" r="80" fill="none" stroke="#6c5ce7" stroke-width="20" stroke-dasharray="25 475" stroke-dashoffset="-475" transform="rotate(-90 100 100)"/>
+                                        
+                                        <!-- Center text -->
+                                        <text x="100" y="95" text-anchor="middle" font-size="18" font-weight="bold">47</text>
+                                        <text x="100" y="110" text-anchor="middle" font-size="12">Total Deals</text>
+                                    </svg>
+                                    
+                                    <div data-chart-legend>
+                                        <ul>
+                                            <li data-color="#ff6b35">Prospecting (35%)</li>
+                                            <li data-color="#4ecdc4">Qualified (25%)</li>
+                                            <li data-color="#45b7d1">Proposal (20%)</li>
+                                            <li data-color="#f9ca24">Negotiation (15%)</li>
+                                            <li data-color="#6c5ce7">Closed Won (5%)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                            
+                            <!-- Top Performers -->
+                            <article data-chart="top-performers">
+                                <header>
+                                    <h3>Top Performers</h3>
+                                    <select name="performanceMetric">
+                                        <option value="revenue">Revenue</option>
+                                        <option value="deals">Deals Closed</option>
+                                        <option value="activities">Activities</option>
+                                    </select>
+                                </header>
+                                <div data-chart-container="bar-chart">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Rep</th>
+                                                <th scope="col">Revenue</th>
+                                                <th scope="col">Progress</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Sarah Chen</td>
+                                                <td>$89,250</td>
+                                                <td><progress value="89.25" max="100">89%</progress></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mike Rodriguez</td>
+                                                <td>$67,800</td>
+                                                <td><progress value="67.8" max="100">68%</progress></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Emily Johnson</td>
+                                                <td>$54,600</td>
+                                                <td><progress value="54.6" max="100">55%</progress></td>
+                                            </tr>
+                                            <tr>
+                                                <td>David Park</td>
+                                                <td>$45,300</td>
+                                                <td><progress value="45.3" max="100">45%</progress></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    
+                    <!-- Recent Activities and Data Tables -->
+                    <section id="activities-section" aria-labelledby="activities-heading">
+                        <h2 id="activities-heading">Recent Activities & Data</h2>
+                        
+                        <div id="activities-layout">
+                            
+                            <!-- Recent Activities Feed -->
+                            <article data-widget="activity-feed" data-span="1">
+                                <header>
+                                    <h3>Recent Activities</h3>
+                                    <button type="button" data-action="view-all">View All</button>
+                                </header>
+                                <div data-feed-container>
+                                    <ol data-activity-list>
+                                        <li data-activity-item data-timestamp="2025-07-20T11:30:00Z">
+                                            <time datetime="2025-07-20T11:30:00Z">11:30 AM</time>
+                                            <div data-activity-content>
+                                                <strong>Deal Updated</strong>
+                                                <p>TechStart Industries moved to Negotiation stage</p>
+                                                <span data-user>by Sarah Chen</span>
+                                            </div>
+                                        </li>
+                                        <li data-activity-item data-timestamp="2025-07-20T10:45:00Z">
+                                            <time datetime="2025-07-20T10:45:00Z">10:45 AM</time>
+                                            <div data-activity-content>
+                                                <strong>New Lead</strong>
+                                                <p>Global Dynamics Inc. - Enterprise Software</p>
+                                                <span data-user>assigned to Mike Rodriguez</span>
+                                            </div>
+                                        </li>
+                                        <li data-activity-item data-timestamp="2025-07-20T09:20:00Z">
+                                            <time datetime="2025-07-20T09:20:00Z">9:20 AM</time>
+                                            <div data-activity-content>
+                                                <strong>Meeting Completed</strong>
+                                                <p>Demo call with Acme Corporation</p>
+                                                <span data-user>by John Doe</span>
+                                            </div>
+                                        </li>
+                                        <li data-activity-item data-timestamp="2025-07-20T08:15:00Z">
+                                            <time datetime="2025-07-20T08:15:00Z">8:15 AM</time>
+                                            <div data-activity-content>
+                                                <strong>Proposal Sent</strong>
+                                                <p>$125K Enterprise Package to CloudTech Solutions</p>
+                                                <span data-user">by Emily Johnson</span>
+                                            </div>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </article>
+                            
+                            <!-- Hot Leads Table -->
+                            <article data-widget="hot-leads" data-span="2">
+                                <header>
+                                    <h3>Hot Leads</h3>
+                                    <div data-table-controls>
+                                        <input type="search" placeholder="Filter leads..." data-table-filter>
+                                        <button type="button" data-action="export">Export</button>
+                                        <button type="button" data-action="refresh">Refresh</button>
+                                    </div>
+                                </header>
+                                
+                                <div data-table-container>
+                                    <table data-sortable="true" data-filterable="true">
+                                        <caption hidden>Hot leads requiring immediate attention</caption>
+                                        <colgroup>
+                                            <col data-column="company">
+                                            <col data-column="contact">
+                                            <col data-column="value">
+                                            <col data-column="score">
+                                            <col data-column="stage">
+                                            <col data-column="owner">
+                                            <col data-column="actions">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" data-sortable="company">
+                                                    <button type="button">
+                                                        Company
+                                                        <span aria-hidden="true" data-sort-indicator="⇅</span>
+                                                    </button>
+                                                </th>
+                                                <th scope="col" data-sortable="contact">
+                                                    <button type="button">
+                                                        Primary Contact
+                                                        <span aria-hidden="true" data-sort-indicator="⇅</span>
+                                                    </button>
+                                                </th>
+                                                <th scope="col" data-sortable="value">
+                                                    <button type="button">
+                                                        Est. Value
+                                                        <span aria-hidden="true" data-sort-indicator="⇅</span>
+                                                    </button>
+                                                </th>
+                                                <th scope="col" data-sortable="score">
+                                                    <button type="button">
+                                                        Lead Score
+                                                        <span aria-hidden="true" data-sort-indicator="⇅</span>
+                                                    </button>
+                                                </th>
+                                                <th scope="col" data-sortable="stage">
+                                                    <button type="button">
+                                                        Stage
+                                                        <span aria-hidden="true" data-sort-indicator="⇅</span>
+                                                    </button>
+                                                </th>
+                                                <th scope="col" data-sortable="owner">
+                                                    <button type="button">
+                                                        Owner
+                                                        <span aria-hidden="true" data-sort-indicator="⇅</span>
+                                                    </button>
+                                                </th>
+                                                <th scope="col">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr data-lead-id="1001" data-priority="high">
+                                                <td>
+                                                    <div data-company-info>
+                                                        <strong>TechStart Industries</strong>
+                                                        <small>Software Development</small>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-contact-info>
+                                                        <strong>Jennifer Walsh</strong>
+                                                        <small>CTO</small>
+                                                        <a href="mailto:j.walsh@techstart.com">j.walsh@techstart.com</a>
+                                                    </div>
+                                                </td>
+                                                <td data-value="85000">$85,000</td>
+                                                <td>
+                                                    <div data-score-container>
+                                                        <meter value="94" min="0" max="100" optimum="80">94/100</meter>
+                                                        <span>94</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span data-stage="negotiation">Negotiation</span>
+                                                </td>
+                                                <td>Sarah Chen</td>
+                                                <td>
+                                                    <div data-action-buttons>
+                                                        <button type="button" data-action="view">View</button>
+                                                        <button type="button" data-action="edit">Edit</button>
+                                                        <button type="button" data-action="contact">Contact</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr data-lead-id="1002" data-priority="high">
+                                                <td>
+                                                    <div data-company-info>
+                                                        <strong>Global Dynamics Inc.</strong>
+                                                        <small>Manufacturing</small>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-contact-info>
+                                                        <strong>Robert Kim</strong>
+                                                        <small>VP Operations</small>
+                                                        <a href="mailto:r.kim@globaldynamics.com">r.kim@globaldynamics.com</a>
+                                                    </div>
+                                                </td>
+                                                <td data-value="125000">$125,000</td>
+                                                <td>
+                                                    <div data-score-container>
+                                                        <meter value="87" min="0" max="100" optimum="80">87/100</meter>
+                                                        <span>87</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span data-stage="proposal">Proposal</span>
+                                                </td>
+                                                <td>Mike Rodriguez</td>
+                                                <td>
+                                                    <div data-action-buttons>
